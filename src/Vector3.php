@@ -216,7 +216,10 @@ class Vector3{
 	}
 
 	public function distanceSquared(Vector3 $pos) : float{
-		return (($this->x - $pos->x) ** 2) + (($this->y - $pos->y) ** 2) + (($this->z - $pos->z) ** 2);
+		$dx = $this->x - $pos->x;
+        $dy = $this->y - $pos->y;
+        $dz = $this->z - $pos->z;
+        return ($dx * $dx) + ($dy * $dy) + ($dz * $dz);
 	}
 
 	public function maxPlainDistance(Vector3|Vector2|float $x, float $z = 0) : float{
