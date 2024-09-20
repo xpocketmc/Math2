@@ -12,3 +12,4 @@ class Vector4 {
   public function Vector4() {
     //NOOP
   }
+}
